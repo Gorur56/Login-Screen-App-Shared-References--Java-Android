@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sp;
 
     private SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(editTextUsername.getText().toString().equals("admin") && editTextPassword.getText().toString().equals("12345"))
                 {
-                    editor.putString("username", editTextUsername.toString());
-                    editor.putString("password", editTextPassword.toString());
+                    editor.putString("username", editTextUsername.getText().toString());
+                    editor.putString("password", editTextPassword.getText().toString());
                     editor.commit();
 
                     startActivity(new Intent(MainActivity.this,AnaEkranActivity.class));
