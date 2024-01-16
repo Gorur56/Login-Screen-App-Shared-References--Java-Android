@@ -10,6 +10,12 @@
 
 ![image](https://github.com/Gorur56/Login-Screen-App-Shared-References--Java-Android/assets/54911292/8541df53-9e55-4469-a993-bdaf18bac38a)
 
+# Ana Ekran
+
+![image](https://github.com/Gorur56/Login-Screen-App-Shared-References--Java-Android/assets/54911292/39634f66-26b0-463d-8f0b-e45f0b3907a0)
+
+
+
 
 
 
