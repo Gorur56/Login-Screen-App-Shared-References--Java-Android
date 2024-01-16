@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.security.PrivateKey;
 
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                     editor.commit();
 
                     startActivity(new Intent(MainActivity.this,AnaEkranActivity.class));
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Giriş Hatalı", Toast.LENGTH_LONG).show();
                 }
             }
         });
