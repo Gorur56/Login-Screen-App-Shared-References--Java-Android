@@ -37,7 +37,8 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 editor.remove("username");
-                editor.remove("password");
+                editor.putString("password","null"); //İkiside aynı anlama gelir. Biri null atar diğeri değeri siler.
+                editor.commit();
                 startActivity(new Intent(AnaEkranActivity.this,MainActivity.class));
             }
         });
