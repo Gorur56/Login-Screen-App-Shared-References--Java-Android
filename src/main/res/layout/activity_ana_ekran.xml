@@ -10,16 +10,24 @@
         android:id="@+id/textViewCikti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="134dp"
         android:text="Username: , Password: "
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="140dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginEnd="160dp"
         android:text="Logout"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCikti" />
 </androidx.constraintlayout.widget.ConstraintLayout>

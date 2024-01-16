@@ -2,8 +2,10 @@ package com.firstapp.loginscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,6 +31,18 @@ public class MainActivity extends AppCompatActivity {
         sp = getSharedPreferences("GirisBilgi",MODE_PRIVATE);
         editor = sp.edit();
 
-        
+        girisButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(editTextUsername.getText().toString().equals("admin") && editTextPassword.getText().toString().equals("12345"))
+                {
+                    editor.putString("username", editTextUsername.toString());
+                    editor.putString("password", editTextPassword.toString());
+                    editor.commit();
+
+                    startActivity(new Intent(MainActivity.this,AnaEkranActivity.class));
+                }
+            }
+        });
     }
 }
