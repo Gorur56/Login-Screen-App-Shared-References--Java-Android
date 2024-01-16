@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences.Editor editor;
 
+    private String username;
+
+    private String password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
         sp = getSharedPreferences("GirisBilgi",MODE_PRIVATE);
         editor = sp.edit();
 
+        username = sp.getString("username","Kullanıcı adı yok");
+        password = sp.getString("password","Şifre yok");
+
+        if (username.equals("admin") && password.equals("12345"))
+        {
+            //Çıkış yapmadığımda arka plandan açınca tekrar Ana sayfa gelmesi için
+            startActivity(new Intent(MainActivity.this,AnaEkranActivity.class));
+            finish(); // back tuşuna bastığımızda uygulamadan çıkış yapması için anasayfaya dönmeyecektir.
+        }
+
         girisButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.commit();
 
                     startActivity(new Intent(MainActivity.this,AnaEkranActivity.class));
+                    finish(); // back tuşuna bastığımızda uygulamadan çıkış yapması için anasayfaya dönmeyecektir.
                 }
                 else
                 {

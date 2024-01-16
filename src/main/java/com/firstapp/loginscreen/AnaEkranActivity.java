@@ -40,6 +40,7 @@ public class AnaEkranActivity extends AppCompatActivity {
                 editor.putString("password","null"); //İkiside aynı anlama gelir. Biri null atar diğeri değeri siler.
                 editor.commit();
                 startActivity(new Intent(AnaEkranActivity.this,MainActivity.class));
+                finish(); // Ekranı hafızadan siler. back tuşuna bastığımızda uygulamadan çıkış yapması için Login 'e dönmeyecektir.
             }
         });
     }
